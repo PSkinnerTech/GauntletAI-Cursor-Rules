@@ -18,8 +18,8 @@ const banner = chalk.cyan(`
 
 // Get the rules directory path
 const getRulesPath = () => {
-  const homeDir = os.homedir();
-  return path.join(homeDir, '.cursor', 'rules');
+  const currentDir = process.cwd();
+  return path.join(currentDir, '.cursor', 'rules');
 };
 
 // Get the source rules directory (relative to this script)

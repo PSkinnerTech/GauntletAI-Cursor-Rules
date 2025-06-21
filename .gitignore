@@ -79,4 +79,5 @@ Thumbs.db
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp # CLI test artifacts
+.cursor/

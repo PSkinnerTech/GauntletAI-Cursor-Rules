@@ -50,13 +50,13 @@ npx gauntlet-rules list
 
 | Rule | Description | Contributor | Version |
 |------|-------------|-------------|---------|
-| **[docker.mdc](rules/infra/docker.mdc)** | Docker and containerization best practices for modern DevOps workflows. Multi-stage builds, security guidelines, and deployment patterns. | *Placeholder - Contribute!* | 0.1 |
+| **[docker.mdc](rules/infra/docker.mdc)** | Docker and containerization best practices for modern DevOps workflows. Multi-stage builds, security guidelines, and deployment patterns. | Patrick Skinner [🐦](https://x.com/PSkinnerTech) [🐙](https://github.com/PSkinnerTech) | 0.1 |
 
 ### 🤖 AI/ML Development (`--ai`)
 
 | Rule | Description | Contributor | Version |
 |------|-------------|-------------|---------|
-| **[prompting.mdc](rules/ai/prompting.mdc)** | AI prompting best practices and LLM interaction patterns. Prompt engineering, context management, and agent design principles. | *Placeholder - Contribute!* | 0.1 |
+| **[prompting.mdc](rules/ai/prompting.mdc)** | AI prompting best practices and LLM interaction patterns. Prompt engineering, context management, and agent design principles. | Patrick Skinner [🐦](https://x.com/PSkinnerTech) [🐙](https://github.com/PSkinnerTech) | 0.1 |
 
 ## How to Use These Rules
 

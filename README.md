@@ -39,8 +39,8 @@ Cursor Rules are powerful configuration files that help AI assistants understand
 
 ### Method 2: Clone the Repository
 ```bash
-git clone https://github.com/your-org/cursor-rules.git
-cd cursor-rules
+git clone https://github.com/PSkinnerTech/GauntletAI-Cursor-Rules.git
+cd GauntletAI-Cursor-Rules
 ```
 
 Then copy the desired rules from `.cursor/rules/` to your project's `.cursor/rules/` directory.
@@ -48,7 +48,7 @@ Then copy the desired rules from `.cursor/rules/` to your project's `.cursor/rul
 ### Method 3: Reference Rules
 You can reference these rules in your project using the `@file` syntax:
 ```
-@file https://raw.githubusercontent.com/your-org/cursor-rules/main/.cursor/rules/shadcn.mdc
+@file https://raw.githubusercontent.com/PSkinnerTech/GauntletAI-Cursor-Rules/master/.cursor/rules/shadcn.mdc
 ```
 
 ## Contributing Your Rules

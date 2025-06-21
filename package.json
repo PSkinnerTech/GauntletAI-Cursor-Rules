@@ -1,6 +1,6 @@
 {
   "name": "gauntlet-rules",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Elite Cursor Rules from Gauntlet AI graduates - CLI installer for modern development workflows",
   "main": "bin/gauntlet-rules.js",
   "bin": {
@@ -33,4 +33,4 @@
   "engines": {
     "node": ">=14.0.0"
   }
-} 
+}

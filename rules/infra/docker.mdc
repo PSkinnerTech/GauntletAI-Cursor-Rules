@@ -1,0 +1,51 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "Docker and containerization best practices for modern DevOps workflows. Includes multi-stage builds, security guidelines, and deployment patterns."
+globs: "Dockerfile,docker-compose.yml,docker-compose.yaml,*.dockerfile"
+alwaysApply: false
+---
+
+# Docker & Containerization Standards
+
+This rule enforces Docker best practices for Gauntlet AI projects.
+
+## Multi-Stage Builds
+
+Always use multi-stage builds for production applications:
+
+```dockerfile
+# Build stage
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Production stage
+FROM node:18-alpine AS production
+WORKDIR /app
+COPY --from=builder /app/node_modules ./node_modules
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+## Security Best Practices
+
+- Use non-root users in containers
+- Scan images for vulnerabilities
+- Use minimal base images (alpine when possible)
+- Never include secrets in images
+
+## Docker Compose Guidelines
+
+Structure your docker-compose files with:
+- Environment-specific overrides
+- Health checks for all services
+- Proper network isolation
+- Volume mounts for development
+
+*This is a placeholder rule. Contribute the full Docker standards to expand this rule.*

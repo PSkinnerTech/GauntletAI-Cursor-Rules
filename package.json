@@ -1,0 +1,36 @@
+{
+  "name": "gauntlet-rules",
+  "version": "1.0.0",
+  "description": "Elite Cursor Rules from Gauntlet AI graduates - CLI installer for modern development workflows",
+  "main": "bin/gauntlet-rules.js",
+  "bin": {
+    "gauntlet-rules": "./bin/gauntlet-rules.js"
+  },
+  "scripts": {
+    "start": "node bin/gauntlet-rules.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cursor",
+    "ai",
+    "development",
+    "productivity",
+    "gauntlet",
+    "rules",
+    "cli"
+  ],
+  "author": "Patrick Skinner <patrick@gauntletai.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PSkinnerTech/GauntletAI-Cursor-Rules.git"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

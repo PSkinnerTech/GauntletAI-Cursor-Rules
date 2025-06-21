@@ -12,43 +12,85 @@ Cursor Rules are powerful configuration files that help AI assistants understand
 
 📖 **Learn more:** [Official Cursor Rules Documentation](https://docs.cursor.com/context/rules)
 
+## 🚀 Quick Start
+
+Install rules instantly with our CLI:
+
+```bash
+# Install specific rule categories
+npx gauntlet-rules install --design
+npx gauntlet-rules install --infra
+npx gauntlet-rules install --ai
+
+# Install all rules at once
+npx gauntlet-rules install --all
+
+# List available categories
+npx gauntlet-rules list
+```
+
+### ⚡ CLI Features
+
+- **🚀 Zero Configuration**: Works instantly with `npx` - no global installation needed
+- **📂 Smart Detection**: Automatically creates `.cursor/rules/` directory in your home folder
+- **🎯 Selective Installation**: Install only the rule categories you need
+- **✅ Success Feedback**: Clear confirmation of what was installed and where
+- **🛡️ Error Handling**: Graceful handling of missing categories or permissions
+- **📋 Category Listing**: See all available rule categories before installing
+
 ## Available Rules
 
-### Frontend & UI Development
+### 🎨 Frontend & UI Development (`--design`)
 
 | Rule | Description | Contributor | Version |
 |------|-------------|-------------|---------|
-| **[shadcn.mdc](.cursor/rules/shadcn.mdc)** | Comprehensive shadcn/ui component guidelines with Tailwind CSS v4 best practices. Includes modern CSS-first configuration, dynamic utilities, and browser compatibility notes. | Patrick Skinner [🐦](https://x.com/PSkinnerTech) [🐙](https://github.com/PSkinnerTech) | 1.0 |
+| **[shadcn.mdc](rules/design/shadcn.mdc)** | Comprehensive shadcn/ui component guidelines with Tailwind CSS v4 best practices. Includes modern CSS-first configuration, dynamic utilities, and browser compatibility notes. | Patrick Skinner [🐦](https://x.com/PSkinnerTech) [🐙](https://github.com/PSkinnerTech) | 1.0 |
 
-### Backend Development
-*Coming soon...*
+### ⚙️ DevOps & Infrastructure (`--infra`)
 
-### DevOps & Infrastructure  
-*Coming soon...*
+| Rule | Description | Contributor | Version |
+|------|-------------|-------------|---------|
+| **[docker.mdc](rules/infra/docker.mdc)** | Docker and containerization best practices for modern DevOps workflows. Multi-stage builds, security guidelines, and deployment patterns. | *Placeholder - Contribute!* | 0.1 |
 
-### AI/ML Development
-*Coming soon...*
+### 🤖 AI/ML Development (`--ai`)
+
+| Rule | Description | Contributor | Version |
+|------|-------------|-------------|---------|
+| **[prompting.mdc](rules/ai/prompting.mdc)** | AI prompting best practices and LLM interaction patterns. Prompt engineering, context management, and agent design principles. | *Placeholder - Contribute!* | 0.1 |
 
 ## How to Use These Rules
 
-### Method 1: Copy Individual Rules
+### 🥇 Method 1: CLI Installation (Recommended)
+The fastest way to get Gauntlet AI rules into your project:
+
+```bash
+# Install specific categories
+npx gauntlet-rules install --design   # UI/UX rules
+npx gauntlet-rules install --infra    # DevOps rules  
+npx gauntlet-rules install --ai       # AI/ML rules
+
+# Or install everything
+npx gauntlet-rules install --all
+```
+
+### 📋 Method 2: Copy Individual Rules
 1. Browse the rules above and click on the rule you want
 2. Copy the content of the `.mdc` file
 3. In your project, create a new Cursor Rule via Command Palette (`Cmd/Ctrl + Shift + P` > "New Cursor Rule")
 4. Paste the content and save
 
-### Method 2: Clone the Repository
+### 📦 Method 3: Clone the Repository
 ```bash
 git clone https://github.com/PSkinnerTech/GauntletAI-Cursor-Rules.git
 cd GauntletAI-Cursor-Rules
 ```
 
-Then copy the desired rules from `.cursor/rules/` to your project's `.cursor/rules/` directory.
+Then copy the desired rules from `rules/[category]/` to your project's `.cursor/rules/` directory.
 
-### Method 3: Reference Rules
+### 🔗 Method 4: Reference Rules
 You can reference these rules in your project using the `@file` syntax:
 ```
-@file https://raw.githubusercontent.com/PSkinnerTech/GauntletAI-Cursor-Rules/master/.cursor/rules/shadcn.mdc
+@file https://raw.githubusercontent.com/PSkinnerTech/GauntletAI-Cursor-Rules/master/rules/design/shadcn.mdc
 ```
 
 ## Contributing Your Rules

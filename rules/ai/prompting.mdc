@@ -1,0 +1,60 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: "AI prompting best practices and LLM interaction patterns. Includes prompt engineering, context management, and agent design principles."
+globs: "*.py,*.ts,*.js,*prompt*,*ai*,*llm*"
+alwaysApply: false
+---
+
+# AI Prompting & LLM Best Practices
+
+Elite prompting techniques for Gauntlet AI graduates.
+
+## Prompt Engineering Principles
+
+### Structure Your Prompts
+- Use clear, specific instructions
+- Provide context and examples
+- Break complex tasks into steps
+- Define output format expectations
+
+### Context Management
+```python
+# Good: Structured context
+system_prompt = """
+You are a senior software engineer reviewing code.
+Focus on: security, performance, maintainability.
+Provide specific, actionable feedback.
+"""
+
+user_prompt = f"""
+Review this function:
+{code_snippet}
+
+Check for potential issues and suggest improvements.
+"""
+```
+
+### Temperature Guidelines
+- **0.1-0.3**: Code generation, factual responses
+- **0.4-0.7**: Creative writing, brainstorming
+- **0.8-1.0**: Highly creative tasks
+
+## Agent Design Patterns
+
+### Tool Usage
+- Define clear tool interfaces
+- Handle errors gracefully
+- Implement retry logic
+- Log all interactions
+
+### Multi-Agent Systems
+- Clear role definitions
+- Handoff protocols
+- State management
+- Communication patterns
+
+*This is a placeholder rule. Contribute advanced AI patterns to expand this rule.*

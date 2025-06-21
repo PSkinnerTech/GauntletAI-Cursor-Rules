@@ -32,10 +32,11 @@ const getSourceRulesPath = (category) => {
 async function copyRules(category, description) {
   try {
     const sourcePath = getSourceRulesPath(category);
-    const targetPath = getRulesPath();
+    const baseTargetPath = getRulesPath();
+    const categoryTargetPath = path.join(baseTargetPath, category);
     
-    // Ensure .cursor/rules directory exists
-    await fs.ensureDir(targetPath);
+    // Ensure .cursor/rules/[category] directory exists
+    await fs.ensureDir(categoryTargetPath);
     
     // Check if source category exists
     if (!await fs.pathExists(sourcePath)) {
@@ -43,7 +44,7 @@ async function copyRules(category, description) {
       return false;
     }
     
-    // Copy all files from source category to target
+    // Copy all files from source category to target category directory
     const files = await fs.readdir(sourcePath);
     let copiedCount = 0;
     
@@ -51,7 +52,7 @@ async function copyRules(category, description) {
       if (file.endsWith('.mdc')) {
         await fs.copy(
           path.join(sourcePath, file),
-          path.join(targetPath, file)
+          path.join(categoryTargetPath, file)
         );
         copiedCount++;
       }
@@ -59,7 +60,7 @@ async function copyRules(category, description) {
     
     if (copiedCount > 0) {
       console.log(chalk.green(`✅ ${description} rules installed (${copiedCount} files)`));
-      console.log(chalk.gray(`   📁 ${targetPath}`));
+      console.log(chalk.gray(`   📁 ${categoryTargetPath}`));
     } else {
       console.log(chalk.yellow(`⚠️  No .mdc files found in ${category} category`));
     }

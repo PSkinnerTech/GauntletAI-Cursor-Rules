@@ -51,6 +51,7 @@ npx gauntlet-rules list
 | Rule | Description | Contributor | Version |
 |------|-------------|-------------|---------|
 | **[docker.mdc](rules/infra/docker.mdc)** | Docker and containerization best practices for modern DevOps workflows. Multi-stage builds, security guidelines, and deployment patterns. | Patrick Skinner [🐦](https://x.com/PSkinnerTech) [🐙](https://github.com/PSkinnerTech) | 0.1 |
+| **[firebase.mdc](rules/infra/firebase.mdc)** | Firebase and Angular/Ionic development best practices. Comprehensive guidelines for Firestore, Authentication, Functions, Hosting, and mobile/web app development with TypeScript. | Nataly [🐙](https://github.com/astrogirlnim) | 1.0 |
 
 ### 🤖 AI/ML Development (`--ai`)
 
